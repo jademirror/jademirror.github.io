@@ -1,0 +1,135 @@
+:root {
+    --jdm-dark-background: #010101;
+    --jdm-light-gray: rgb(179, 179, 179);
+    --jdm-light-light-gray: #eee;
+}
+
+body {
+    background-color: var(--jdm-dark-background);
+    text-align: center;
+    font-family: 'Mukta', sans-serif;
+}
+
+.console {
+    position: fixed;
+    bottom: 2em;
+    width: 50em;
+    left: calc(50% - 25em);
+}
+
+.console-controls {
+    font-size: 14pt;
+    padding: 0.8em;
+    display: inline-block;
+    border-style: none;
+    -webkit-appearance: none;
+}
+
+input.console-controls {
+    width: 25em;
+    border-radius: 0.3em 0 0 0.3em;
+    outline: none;
+    margin: 0;
+}
+
+#query-dropdown {
+    visibility: hidden;
+    width: 26.6em;
+    min-height: 0;
+    overflow: hidden;
+    margin-left: -2.7em;
+    margin-bottom: -0.5em;
+    background-color: var(--jdm-light-light-gray);
+    border-radius: 0.3em 0.3em 0 0;
+    text-align: left;
+    padding: 0;
+}
+
+#query-dropdown div {
+    padding-bottom: 0.3em;
+    padding-top: 0.3em;
+    padding-left: 2.5em;
+    background-repeat: no-repeat;
+    background-size: 32px 32px;
+    background-position: 2% 50%;
+    cursor: pointer;
+}
+
+#query-dropdown div:hover {
+    background-color: var(--jdm-light-gray);
+}
+
+button.console-controls {
+    outline: none;
+    background-color: var(--jdm-light-gray);
+    border-radius: 0 0.3em 0.3em 0;
+}
+
+.console .example {
+    margin-top: 0.3em;
+    margin-left: 0.3em;
+    color: var(--jdm-light-light-gray);
+}
+
+.example a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.example a:visited {
+    color: inherit;
+}
+
+#graph {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: RGBa(0,0,0,0.8);
+}
+
+#taskbar {
+    position: fixed;
+    left: 0;
+    right: 0;
+    text-align: center;
+    margin-bottom: 0.3em;
+    z-index: 99999;
+}
+
+#taskbar div.entry {
+    color: var(--jdm-light-gray);
+    display: inline-block;
+    margin: 0.2em;
+    border-style: solid;
+    padding: 0.2em 0.6em 0.2em 0.6em;
+    border-radius: 0.3em;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+#taskbar div.entry > button {
+    background-color: transparent;
+    color: inherit;
+    border-style: none;
+    padding: 0;
+    margin-left: 0.5em;
+    border-radius: 0.1em;
+}
+
+#taskbar div.entry > * {
+    vertical-align: middle;
+}
+
+#taskbar img.icon {
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+}
+
+#taskbar div.title {
+    margin-left: 0.5em;
+    display: inline-block;
+}

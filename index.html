@@ -1,0 +1,55 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Jademirror!</title>
+  <meta name="description" content="Dig in and transform your data with textual queries using modern AI, yet without sharing it with anyone">
+  <meta name="author" content="jademirror">
+
+  <meta property="og:title" content="Jademirror!">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="jademirror.org">
+  <meta property="og:description" content="">
+  <meta property="og:image" content="/img/branding/opengraph.png">
+
+  <link rel="icon" href="/img/branding/favicon.ico">
+  <link rel="icon" href="/img/branding/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/img/branding/apple-touch-icon.png">
+
+  <link rel="stylesheet" href="css/app.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300&family=Mulish&display=swap" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+  <script src="mir/index.js"></script>
+
+  <script src="js/view.js"></script>
+
+</head>
+
+<body onload="Kernel.init()">
+
+  <div id="taskbar"></div>
+  <div id="graph"></div>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chartist/0.11.4/chartist.min.css">
+
+<div class="console">
+<div id="query-dropdown" class="console-controls"></div>
+<input id="query-text-input" class="console-controls" placeholder="What do you want to do?" type="text" autocomplete="off" onkeyup="Kernel.query(event)" onclick="Kernel.query()" onfocus="Kernel.query()" onblur="Kernel.hideDropdown()"/><button class="console-controls">go</button>
+<div class="example">Maybe <a href="">get latest news?</a></div>
+</div>
+
+<canvas id="renderer" width="640" height="640" style="display: none"></canvas>
+<div id="plotter" style="display: none"></div>
+<script src="js/kernel.js"></script>
+<script src='https://cdn.plot.ly/plotly-2.14.0.min.js'></script>
+</body>
+</html>
